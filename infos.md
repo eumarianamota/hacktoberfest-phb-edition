@@ -6,5 +6,6 @@
 - Willamy Josue Santos Serejo -  [Insta]() & [Github]()
 - Celenny Christyne do Nascimento Sousa -  [Insta]() & [Github]()
 - Jonatha Sousa Carvalho -  [Insta](https://www.instagram.com/eujonathamermo/) & [Github](https://github.com/jowgaze)
+- Edson Rocha da Silva -  [Insta](https://www.instagram.com/edsonrochada39/) & [Github](https://github.com/eddieJPN)
 
 # Participantes HacktoberFest PHB Edition 2025
