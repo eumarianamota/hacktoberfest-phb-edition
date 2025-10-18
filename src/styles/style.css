@@ -27,12 +27,44 @@ body {
     height: 100vh;
     background: linear-gradient(135deg, #1e1e40, #3a3a8c);
     text-align: center;
+    box-shadow: 0 6px 1rem rgba(0, 0, 0, 0.6);
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.title {
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    z-index: 0;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 5px;
+    border-radius: inherit;
+    background: linear-gradient(
+        90deg,
+        #00ffff,
+        #ff00ff,
+        #00ffff
+    );
+    background-size: 300%;
+    animation: border-move 3s linear infinite;
+    z-index: -1;
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  
 footer{
     display: flex;
     justify-content: center;
@@ -55,6 +87,11 @@ footer{
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .organizer, .participant {
@@ -66,16 +103,27 @@ footer{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
+.organizer:hover, .participant:hover {
+    cursor: default;
+}
+
 .organizer a, .participant a {
     text-decoration: none;
     color: var(--dark-purple);
 }
 
-img {
-    width: 60px;
-    border-radius: 30px;
+.organizer a i:hover, .participant a i:hover {
+    -webkit-text-stroke: 1px black;
 }
 
-
-
-
+img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+  
+@keyframes border-move {
+  to {
+    background-position: 300% 0;
+  }
