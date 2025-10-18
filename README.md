@@ -76,10 +76,13 @@ Seguiu o tutorial certinho? fique tranquilo(a) que em breve vamos juntar todas a
 ## Terminei, e agora?
 Fez o seu primeiro Pull Request com sucesso? Agora faltam só mais cinco contribuições para você concluir o desafio do hacktoberfest 2025.
 
-Para te ajudar, vou deixar o link de alguns repositórios que você pode contribuir para concluir o desafio, mas não se limite a eles, existem inúmeros projetos do github esperando pela sua contribuição.
+Para te ajudar, vou deixaro link de alguns repositórios que você pode contribuir para concluir o desafio, mas não se limite a eles, existem inúmeros projetos do github esperando pela sua contribuição.
 
 ### Repositórios em Markdown 
-[Materiais de estudo]()
-[Simuladores Virtuais]()
-[Materiais sobre cybersegurança]()
-[Repositório de extensões para IDE]()
+[Materiais de estudo](https://github.com/celycodes/materiais-gratuitos)
+
+[Simuladores Virtuais](https://github.com/JosueSerejo/simuladores-virtuais)
+
+[Materiais sobre cybersegurança](https://github.com/fnetgit/cybersec-notes)
+
+[Repositório de extensões para IDE](https://github.com/acaverna/Extensoes-Maneiras-Para-Sua-IDE)
