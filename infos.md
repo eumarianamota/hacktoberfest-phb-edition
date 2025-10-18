@@ -5,6 +5,6 @@
 - Francisco Alves Ribeiro Neto -  [Insta]() & [Github]()
 - Willamy Josue Santos Serejo -  [Insta]() & [Github]()
 - Celenny Christyne do Nascimento Sousa -  [Insta]() & [Github]()
-- Angelina Machado de Siqueira - [Insta](https://www.instagram.com/angelina_kaay/) & [Github](https://github.com/ASangelina)
 
 # Participantes HacktoberFest PHB Edition 2025
+- Angelina Machado de Siqueira - [Insta](https://www.instagram.com/angelina_kaay/) & [Github](https://github.com/ASangelina)
