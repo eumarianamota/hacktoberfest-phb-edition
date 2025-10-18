@@ -7,3 +7,4 @@
 - Celenny Christyne do Nascimento Sousa -  [Insta]() & [Github]()
 
 # Participantes HacktoberFest PHB Edition 2025
+- Raquel Amaral - [Insta](https://www.instagram.com/richeldare/) & [Github](https://github.com/RichelDare)
