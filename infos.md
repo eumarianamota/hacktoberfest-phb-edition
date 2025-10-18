@@ -12,3 +12,4 @@
 - Angelina Machado de Siqueira - [Insta](https://www.instagram.com/angelina_kaay/) & [Github](https://github.com/ASangelina)
 - Dione Bastos Sousa - [Insta](https://www.instagram.com/dibastos.dev) & [Github](https://github.com/Dione-b)
 - Raquel Amaral - [Insta](https://www.instagram.com/richeldare/) & [Github](https://github.com/RichelDare)
+- Luana Costa Vasconcelos -  [Github](https://github.com/luanacostav)
