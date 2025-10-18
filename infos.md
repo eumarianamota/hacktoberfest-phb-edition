@@ -7,3 +7,4 @@
 - Celenny Christyne do Nascimento Sousa -  [Insta]() & [Github]()
 
 # Participantes HacktoberFest PHB Edition 2025
+- João Pedro Barbosaa - [Insta](https://www.instagram.com/dev_joaopedro/) & [Github](https://github.com/barbosa-jp)
