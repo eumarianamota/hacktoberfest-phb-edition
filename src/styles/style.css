@@ -33,6 +33,15 @@ body {
     align-items: center;
 }
 
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #1e1e40, #3a3a8c);
+}
+
 .organizers, .participants {
     color: var(--dark-purple);
     margin-top: 2rem;
@@ -64,9 +73,7 @@ body {
 
 img {
     width: 60px;
+    height: 60px;
+    object-fit: cover;
     border-radius: 30px;
 }
-
-
-
-
