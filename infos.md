@@ -15,4 +15,4 @@
 - Richard Costa de Brito -  [Insta]() & [Github]()
 - Isabela Dutra Araujo Ribeiro -  [Insta]() & [Github]()
 - Jonatha Sousa Carvalho -  [Insta](https://www.instagram.com/eujonathamermo/) & [Github](https://github.com/jowgaze)
-
+- João Pedro Aguiar Teixeira [Insta]() & [GitHub]()
