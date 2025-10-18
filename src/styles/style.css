@@ -144,6 +144,12 @@ footer p {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
+/* Estilos para o web component info-card */
+info-card {
+    display: block;
+    width: 100%;
+}
+
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     .organizers-container, .participants-container {

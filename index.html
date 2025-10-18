@@ -32,55 +32,45 @@
             <h2>Organizadores</h2>
 
             <div class="organizers-container">
-                <div class="organizer">
-                    <img src="documents/mariana-mota-perfil.jpg" alt="Foto-de-perfil-mariana">
-                    <h4>Mariana da Mota Pinho</h4>
-                    <p>Estudante de sistemas de computação na UESPI de parnaíba.</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/eumariana.dev/"> <i class="bi bi-instagram"></i></a>
-                        <a href="https://github.com/eumarianamota"> <i class="bi bi-github"></i> </a>
-                    </div>
-                </div>
-
-                <div class="organizer">
-                    <h4>Vitor dos Santos Correia</h4>
-                    <p>Estudante de sistemas de computação na UESPI de parnaíba.</p>
-                    <div class="social-links">
-                        <a href="#"> <i class="bi bi-instagram"></i> </a>
-                        <a href="#"> <i class="bi bi-github"></i> </a>
-                    </div>
-                </div>
+                <info-card 
+                    name="Mariana da Mota Pinho"
+                    insta="https://www.instagram.com/eumariana.dev/"
+                    github="https://github.com/eumarianamota"
+                    linkedin=""
+                    img="documents/mariana-mota-perfil.jpg">
+                </info-card>
             </div>
         </section>
 
         <section class="participants">
             <h2>Participantes</h2>
             <div class="participants-container">
-                <div class="participant">
-                    <img src="documents/jowgaze-perfil.png" alt="Foto-de-perfil-Jonatha">
-                    <h4>Jonatha Sousa Carvalho</h4>
-                    <p>Estudante de ciência de computação na UESPI de parnaíba.</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/eujonathamermo/"> <i class="bi bi-instagram"></i> </a>
-                        <a href="https://github.com/jowgaze"> <i class="bi bi-github"></i> </a>
-                    </div>
-                </div>
-                <div class="participant">
-                    <img src="documents/dione_profile.png" alt="Foto-de-perfil-Dione">
-                    <h4>Dione Bastos Sousa</h4>
-                    <p>Desenvolvedor Full Stack | Blockchain Developer</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/dibastos.dev"> <i class="bi bi-instagram"></i> </a>
-                        <a href="https://github.com/Dione-b"> <i class="bi bi-github"></i> </a>
-                        <a href="https://www.linkedin.com/in/dione-bastos"> <i class="bi bi-linkedin"></i> </a>
-                    </div>
-                </div>
+
+                <info-card 
+                    name="Dione Bastos Sousa"
+                    insta="https://www.instagram.com/dibastos.dev"
+                    github="https://github.com/Dione-b"
+                    linkedin="https://www.linkedin.com/in/dione-bastos"
+                    img="documents/dione_profile.png"
+                    description="Desenvolvedor Full Stack | Blockchain Developer">
+                </info-card>
+
+                <info-card 
+                    name="Jonatha Sousa Carvalho"
+                    insta="https://www.instagram.com/eujonathamermo/"
+                    github="https://github.com/jowgaze"
+                    linkedin=""
+                    img="documents/jowgaze-perfil.png"
+                    description="Estudante de ciência de computação na UESPI de parnaíba.">
+                </info-card>
             </div>
         </section>
         <footer>
             <p>HacktoberFest 2025</p>
         </footer>
     </main>
+    
+    <script src="./src/js/info-component.js"></script>
 </body>
 
 </html>
