@@ -13,3 +13,4 @@
 - Dione Bastos Sousa - [Insta](https://www.instagram.com/dibastos.dev) & [Github](https://github.com/Dione-b)
 - Raquel Amaral - [Insta](https://www.instagram.com/richeldare/) & [Github](https://github.com/RichelDare)
 - Luana Costa Vasconcelos -  [Github](https://github.com/luanacostav)
+- João Pedro Barbosaa - [Insta](https://www.instagram.com/dev_joaopedro/) & [Github](https://github.com/barbosa-jp)
