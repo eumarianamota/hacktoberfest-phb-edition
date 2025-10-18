@@ -5,5 +5,7 @@
 - Francisco Alves Ribeiro Neto -  [Insta]() & [Github]()
 - Willamy Josue Santos Serejo -  [Insta]() & [Github]()
 - Celenny Christyne do Nascimento Sousa -  [Insta]() & [Github]()
+- Isabela Dutra Araujo Ribeiro -  [Insta]() & [Github]()
+
 
 # Participantes HacktoberFest PHB Edition 2025
