@@ -7,3 +7,4 @@
 - Celenny Christyne do Nascimento Sousa -  [Insta]() & [Github]()
 
 # Participantes HacktoberFest PHB Edition 2025
+- Luana Costa Vasconcelos -  [Github](https://github.com/luanacostav)
