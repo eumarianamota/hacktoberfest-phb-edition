@@ -7,4 +7,6 @@
 - Celenny Christyne do Nascimento Sousa -  [Insta]() & [Github]()
 - Jonatha Sousa Carvalho -  [Insta](https://www.instagram.com/eujonathamermo/) & [Github](https://github.com/jowgaze)
 
+
 # Participantes HacktoberFest PHB Edition 2025
+- Dione Bastos Sousa - [Insta](https://www.instagram.com/dibastos.dev) & [Github](https://github.com/Dione-b)
