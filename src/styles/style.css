@@ -64,6 +64,14 @@ body {
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
+  
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #1e1e40, #3a3a8c);
 }
 
 .organizers, .participants {
