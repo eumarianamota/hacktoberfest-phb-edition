@@ -36,11 +36,13 @@ body {
 .main {
     padding: 0 2rem;
     height: 100vh;
-    background: 
+    background:
         radial-gradient(circle at 20% 80%, var(--pixel-cyan) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, var(--pixel-pink) 0%, transparent 50%),
         linear-gradient(135deg, var(--pixel-black) 0%, var(--pixel-dark-blue) 100%);
     text-align: center;
+    box-shadow: 0 6px 1rem rgba(0, 0, 0, 0.6);
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,20 +56,18 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-        repeating-linear-gradient(
-            0deg,
+    background:
+        repeating-linear-gradient(0deg,
             transparent,
             transparent 2px,
             rgba(59, 130, 246, 0.1) 2px,
-            rgba(59, 130, 246, 0.1) 4px
-        );
+            rgba(59, 130, 246, 0.1) 4px);
     pointer-events: none;
 }
 
 .main h1 {
     font-size: 24px;
-    text-shadow: 
+    text-shadow:
         2px 2px 0px var(--pixel-black),
         4px 4px 0px var(--pixel-purple);
     color: var(--pixel-cyan);
@@ -77,13 +77,14 @@ body {
 
 @keyframes pixel-glow {
     0% {
-        text-shadow: 
+        text-shadow:
             2px 2px 0px var(--pixel-black),
             4px 4px 0px var(--pixel-purple),
             0 0 10px var(--pixel-cyan);
     }
+
     100% {
-        text-shadow: 
+        text-shadow:
             2px 2px 0px var(--pixel-black),
             4px 4px 0px var(--pixel-purple),
             0 0 20px var(--pixel-cyan),
@@ -107,17 +108,15 @@ body {
     inset: 0;
     padding: 5px;
     border-radius: inherit;
-    background: linear-gradient(
-        90deg,
-        #00ffff,
-        #ff00ff,
-        #00ffff
-    );
+    background: linear-gradient(90deg,
+            #00ffff,
+            #ff00ff,
+            #00ffff);
     background-size: 300%;
     animation: border-move 3s linear infinite;
     z-index: -1;
-    mask: 
-        linear-gradient(#fff 0 0) content-box, 
+    mask:
+        linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
@@ -127,12 +126,13 @@ body {
     0% {
         background-position: 0% 50%;
     }
+
     100% {
         background-position: 300% 50%;
     }
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,23 +148,26 @@ footer p {
     text-shadow: 1px 1px 0px var(--pixel-black);
 }
 
-.organizers, .participants {
+.organizers,
+.participants {
     color: var(--pixel-white);
     margin-top: 2rem;
     text-align: center;
     padding: 0 2rem;
 }
 
-.organizers h2, .participants h2 {
+.organizers h2,
+.participants h2 {
     font-size: 18px;
     color: var(--pixel-yellow);
-    text-shadow: 
+    text-shadow:
         2px 2px 0px var(--pixel-black),
         4px 4px 0px var(--pixel-orange);
     margin-bottom: 1rem;
 }
 
-.organizers-container, .participants-container {
+.organizers-container,
+.participants-container {
     margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -193,7 +196,9 @@ info-card {
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
-    .organizers-container, .participants-container {
+
+    .organizers-container,
+    .participants-container {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         padding: 0 0.5rem;
@@ -204,6 +209,7 @@ info-card {
     .organizers-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .participants-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -213,18 +219,20 @@ info-card {
     .organizers-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .participants-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-.organizer, .participant {
+.organizer,
+.participant {
     border: 3px solid var(--pixel-cyan);
     border-radius: 0;
     padding: 1.5rem;
     cursor: pointer;
     background: linear-gradient(135deg, var(--pixel-white) 0%, var(--pixel-light-gray) 100%);
-    box-shadow: 
+    box-shadow:
         4px 4px 0px var(--pixel-black),
         8px 8px 0px var(--pixel-purple);
     transition: all 0.2s ease;
@@ -238,15 +246,17 @@ info-card {
     justify-content: space-between;
 }
 
-.organizer:hover, .participant:hover {
+.organizer:hover,
+.participant:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 
+    box-shadow:
         6px 6px 0px var(--pixel-black),
         12px 12px 0px var(--pixel-purple);
     border-color: var(--pixel-yellow);
 }
 
-.organizer::before, .participant::before {
+.organizer::before,
+.participant::before {
     content: '';
     position: absolute;
     top: -3px;
@@ -259,19 +269,13 @@ info-card {
     transition: opacity 0.3s ease;
 }
 
-.organizer:hover::before, .participant:hover::before {
+.organizer:hover::before,
+.participant:hover::before {
     opacity: 0.3;
 }
 
-.organizer:hover, .participant:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 
-        6px 6px 0px var(--pixel-black),
-        12px 12px 0px var(--pixel-purple);
-    border-color: var(--pixel-yellow);
-}
-
-.organizer a, .participant a {
+.organizer a,
+.participant a {
     text-decoration: none;
     color: var(--pixel-black);
     font-size: 16px;
@@ -280,13 +284,15 @@ info-card {
     display: inline-block;
 }
 
-.organizer a:hover, .participant a:hover {
+.organizer a:hover,
+.participant a:hover {
     color: var(--pixel-cyan);
     transform: scale(1.2);
     text-shadow: 1px 1px 0px var(--pixel-black);
 }
 
-.organizer h4, .participant h4 {
+.organizer h4,
+.participant h4 {
     font-size: 14px;
     color: var(--pixel-black);
     text-shadow: 1px 1px 0px var(--pixel-gray);
@@ -294,7 +300,8 @@ info-card {
     flex-shrink: 0;
 }
 
-.organizer p, .participant p {
+.organizer p,
+.participant p {
     font-size: 10px;
     color: var(--pixel-gray);
     margin: 8px 0 16px 0;
@@ -305,7 +312,8 @@ info-card {
     justify-content: center;
 }
 
-.organizer a i:hover, .participant a i:hover {
+.organizer a i:hover,
+.participant a i:hover {
     -webkit-text-stroke: 1px black;
 }
 
@@ -323,7 +331,8 @@ img {
     margin-bottom: 8px;
 }
 
-.organizer .social-links, .participant .social-links {
+.organizer .social-links,
+.participant .social-links {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -340,26 +349,36 @@ img:hover {
 
 /* Animações adicionais */
 @keyframes pixel-bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
     }
+
     40% {
         transform: translateY(-10px);
     }
+
     60% {
         transform: translateY(-5px);
     }
 }
 
-.organizer, .participant {
+.organizer,
+.participant {
     animation: pixel-bounce 3s ease-in-out infinite;
 }
 
-.organizer:nth-child(2), .participant:nth-child(2) {
+.organizer:nth-child(2),
+.participant:nth-child(2) {
     animation-delay: 0.5s;
 }
 
-.organizer:nth-child(3), .participant:nth-child(3) {
+.organizer:nth-child(3),
+.participant:nth-child(3) {
     animation-delay: 1s;
 }
 
@@ -387,13 +406,13 @@ img:hover {
 .monster-1 {
     top: 20%;
     left: 10%;
-    background: 
+    background:
         radial-gradient(circle at 8px 8px, var(--pixel-white) 2px, transparent 2px),
         radial-gradient(circle at 24px 8px, var(--pixel-white) 2px, transparent 2px),
-        linear-gradient(45deg, 
-            var(--pixel-cyan) 0%, 
-            var(--pixel-cyan) 30%, 
-            var(--pixel-blue) 30%, 
+        linear-gradient(45deg,
+            var(--pixel-cyan) 0%,
+            var(--pixel-cyan) 30%,
+            var(--pixel-blue) 30%,
             var(--pixel-blue) 100%);
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     animation: float-ghost 4s ease-in-out infinite;
@@ -404,10 +423,10 @@ img:hover {
 .monster-2 {
     top: 60%;
     right: 15%;
-    background: 
+    background:
         radial-gradient(circle at 8px 8px, var(--pixel-white) 1px, transparent 1px),
         radial-gradient(circle at 24px 8px, var(--pixel-white) 1px, transparent 1px),
-        radial-gradient(circle at 16px 16px, rgba(255,255,255,0.3) 3px, transparent 3px),
+        radial-gradient(circle at 16px 16px, rgba(255, 255, 255, 0.3) 3px, transparent 3px),
         linear-gradient(45deg, var(--pixel-green) 0%, #0d9488 100%);
     border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
     animation: slime-bounce 3s ease-in-out infinite;
@@ -418,7 +437,7 @@ img:hover {
 .monster-3 {
     top: 30%;
     right: 25%;
-    background: 
+    background:
         radial-gradient(circle at 8px 8px, var(--pixel-white) 2px, transparent 2px),
         radial-gradient(circle at 24px 8px, var(--pixel-white) 2px, transparent 2px),
         linear-gradient(45deg, var(--pixel-purple) 0%, #7c3aed 100%);
@@ -431,7 +450,7 @@ img:hover {
 .monster-4 {
     bottom: 25%;
     left: 20%;
-    background: 
+    background:
         radial-gradient(circle at 8px 8px, var(--pixel-black) 2px, transparent 2px),
         radial-gradient(circle at 24px 8px, var(--pixel-black) 2px, transparent 2px),
         linear-gradient(45deg, var(--pixel-yellow) 0%, #f59e0b 100%);
@@ -444,7 +463,7 @@ img:hover {
 .monster-5 {
     top: 15%;
     right: 40%;
-    background: 
+    background:
         radial-gradient(circle at 8px 8px, var(--pixel-white) 2px, transparent 2px),
         radial-gradient(circle at 24px 8px, var(--pixel-white) 2px, transparent 2px),
         linear-gradient(45deg, var(--pixel-pink) 0%, #ec4899 100%);
@@ -457,7 +476,7 @@ img:hover {
 .monster-6 {
     bottom: 40%;
     right: 30%;
-    background: 
+    background:
         radial-gradient(circle at 8px 8px, var(--pixel-white) 2px, transparent 2px),
         radial-gradient(circle at 24px 8px, var(--pixel-white) 2px, transparent 2px),
         linear-gradient(45deg, var(--pixel-orange) 0%, #ea580c 100%);
@@ -469,33 +488,73 @@ img:hover {
 
 /* Animações dos monstrinhos */
 @keyframes float-ghost {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-15px) rotate(5deg); }
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
 }
 
 @keyframes slime-bounce {
-    0%, 100% { transform: translateY(0px) scale(1); }
-    50% { transform: translateY(-10px) scale(1.1); }
+
+    0%,
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: translateY(-10px) scale(1.1);
+    }
 }
 
 @keyframes spin-monster {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes happy-bounce {
-    0%, 100% { transform: translateY(0px) scale(1); }
-    50% { transform: translateY(-8px) scale(1.05); }
+
+    0%,
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: translateY(-8px) scale(1.05);
+    }
 }
 
 @keyframes heart-beat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 @keyframes diamond-spin {
-    0%, 100% { transform: rotate(45deg) scale(1); }
-    50% { transform: rotate(225deg) scale(1.1); }
+
+    0%,
+    100% {
+        transform: rotate(45deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(225deg) scale(1.1);
+    }
 }
 
 /* Hover effects para os monstrinhos */
@@ -508,12 +567,13 @@ img:hover {
 }
 
 /* Monstrinhos extras nas seções */
-.organizers::before, .participants::before {
+.organizers::before,
+.participants::before {
     content: '';
     position: absolute;
     width: 24px;
     height: 24px;
-    background: 
+    background:
         radial-gradient(circle at 6px 6px, var(--pixel-white) 1px, transparent 1px),
         radial-gradient(circle at 18px 6px, var(--pixel-white) 1px, transparent 1px),
         linear-gradient(45deg, var(--pixel-red) 0%, #dc2626 100%);
@@ -527,7 +587,7 @@ img:hover {
 }
 
 .organizers::before {
-    background: 
+    background:
         radial-gradient(circle at 6px 6px, var(--pixel-white) 1px, transparent 1px),
         radial-gradient(circle at 18px 6px, var(--pixel-white) 1px, transparent 1px),
         linear-gradient(45deg, var(--pixel-green) 0%, #16a34a 100%);
@@ -535,7 +595,7 @@ img:hover {
 }
 
 .participants::before {
-    background: 
+    background:
         radial-gradient(circle at 6px 6px, var(--pixel-white) 1px, transparent 1px),
         radial-gradient(circle at 18px 6px, var(--pixel-white) 1px, transparent 1px),
         linear-gradient(45deg, var(--pixel-blue) 0%, #2563eb 100%);
@@ -543,16 +603,25 @@ img:hover {
 }
 
 @keyframes mini-bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0px); }
-    50% { transform: translateX(-50%) translateY(-5px); }
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0px);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-5px);
+    }
 }
 
 /* Monstrinhos flutuantes aleatórios */
-.organizers, .participants {
+.organizers,
+.participants {
     position: relative;
 }
 
-.organizers::after, .participants::after {
+.organizers::after,
+.participants::after {
     content: '';
     position: absolute;
     width: 16px;
@@ -579,19 +648,24 @@ img:hover {
 }
 
 @keyframes random-float {
-    0%, 100% { 
+
+    0%,
+    100% {
         transform: translateY(0px) rotate(0deg);
         opacity: 0.7;
     }
-    25% { 
+
+    25% {
         transform: translateY(-10px) rotate(90deg);
         opacity: 1;
     }
-    50% { 
+
+    50% {
         transform: translateY(5px) rotate(180deg);
         opacity: 0.5;
     }
-    75% { 
+
+    75% {
         transform: translateY(-5px) rotate(270deg);
         opacity: 0.8;
     }
