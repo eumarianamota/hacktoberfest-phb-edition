@@ -16,3 +16,4 @@
 - Kauã Neres Moura - [Insta](https://www.instagram.com/neres.dev?igsh=MTN2d2Rxc3J6emhjbQ==) & [Github](https://github.com/Kaua-cel)
 - João Pedro Aguiar Teixeira - [Insta](https://www.instagram.com/pdro025/) & [Github](https://github.com/pedroaguiarcd)
 - Edson Rocha da Silva - [Insta](https://www.instagram.com/edsonrochada39/) & [Github](https://github.com/eddieJPN)
+- João Marcello Machado Braz - [Insta](https://www.instagram.com/joaomarcello.dev/) & [Github](https://github.com/Joaomarcellodev)
