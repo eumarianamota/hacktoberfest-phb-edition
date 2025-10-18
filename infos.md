@@ -5,6 +5,7 @@
 - Francisco Alves Ribeiro Neto -  [Insta]() & [Github]()
 - Willamy Josue Santos Serejo -  [Insta]() & [Github]()
 - Celenny Christyne do Nascimento Sousa -  [Insta]() & [Github]()
-- Dione Bastos Sousa - [Insta](https://www.instagram.com/dibastos.dev) & [Github](https://github.com/Dione-b)
+
 
 # Participantes HacktoberFest PHB Edition 2025
+- Dione Bastos Sousa - [Insta](https://www.instagram.com/dibastos.dev) & [Github](https://github.com/Dione-b)
