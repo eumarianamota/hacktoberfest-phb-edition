@@ -9,4 +9,4 @@
 
 
 # Participantes HacktoberFest PHB Edition 2025
-- Dione Bastos Sousa - [Insta](https://www.instagram.com/dibastos.dev) & [Github](https://github.com/Dione-b)
+- Dione Bastos Sousa - [Insta](https://www.instagram.com/dibastos.dev) & [Github](https://github.com/Dione-b) & [Linkedin](https://www.linkedin.com/in/dione-bastos)

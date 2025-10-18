@@ -1,36 +1,94 @@
 :root {
-    --dark-purple: #1e1e40;
-    --east-bay: #403f7d;
-    --blue-violet: #5a5ab5;
-    --lavandar: #a0a0ff;
-    --melrose: #c2c2ff;
-    --space-haze: #5e577c;
-    --space-dust: #d0cce3;
-    --space-gray: #f2f4f7;
-    --space-white: #ffffff;
+    /* Cores pixeladas retrô */
+    --pixel-black: #0d1117;
+    --pixel-dark-blue: #1f2937;
+    --pixel-blue: #3b82f6;
+    --pixel-cyan: #06b6d4;
+    --pixel-green: #10b981;
+    --pixel-yellow: #f59e0b;
+    --pixel-orange: #f97316;
+    --pixel-red: #ef4444;
+    --pixel-pink: #ec4899;
+    --pixel-purple: #8b5cf6;
+    --pixel-white: #f8fafc;
+    --pixel-gray: #6b7280;
+    --pixel-light-gray: #e5e7eb;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
 }
 
 body {
-    color: var(--space-gray);
-    background-repeat: no-repeat;
-    background-color: var(--space-gray);
+    font-family: 'Press Start 2P', monospace;
+    color: var(--pixel-white);
+    background: linear-gradient(45deg, var(--pixel-black) 0%, var(--pixel-dark-blue) 50%, var(--pixel-purple) 100%);
+    background-attachment: fixed;
+    line-height: 1.6;
+    font-size: 12px;
 }
 
 .main {
     padding: 0 2rem;
     height: 100vh;
-    background: linear-gradient(135deg, #1e1e40, #3a3a8c);
+    background: 
+        radial-gradient(circle at 20% 80%, var(--pixel-cyan) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, var(--pixel-pink) 0%, transparent 50%),
+        linear-gradient(135deg, var(--pixel-black) 0%, var(--pixel-dark-blue) 100%);
     text-align: center;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(59, 130, 246, 0.1) 2px,
+            rgba(59, 130, 246, 0.1) 4px
+        );
+    pointer-events: none;
+}
+
+.main h1 {
+    font-size: 24px;
+    text-shadow: 
+        2px 2px 0px var(--pixel-black),
+        4px 4px 0px var(--pixel-purple);
+    color: var(--pixel-cyan);
+    animation: pixel-glow 2s ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+@keyframes pixel-glow {
+    0% {
+        text-shadow: 
+            2px 2px 0px var(--pixel-black),
+            4px 4px 0px var(--pixel-purple),
+            0 0 10px var(--pixel-cyan);
+    }
+    100% {
+        text-shadow: 
+            2px 2px 0px var(--pixel-black),
+            4px 4px 0px var(--pixel-purple),
+            0 0 20px var(--pixel-cyan),
+            0 0 30px var(--pixel-blue);
+    }
 }
 
 footer{
@@ -39,41 +97,445 @@ footer{
     align-items: center;
     margin-top: 2rem;
     padding: 1rem 2rem;
-    background: linear-gradient(135deg, #1e1e40, #3a3a8c);
+    background: linear-gradient(135deg, var(--pixel-black), var(--pixel-dark-blue));
+    border-top: 3px solid var(--pixel-cyan);
+    box-shadow: 0 -4px 8px rgba(6, 182, 212, 0.3);
+}
+
+footer p {
+    color: var(--pixel-cyan);
+    text-shadow: 1px 1px 0px var(--pixel-black);
 }
 
 .organizers, .participants {
-    color: var(--dark-purple);
+    color: var(--pixel-white);
     margin-top: 2rem;
     text-align: center;
     padding: 0 2rem;
 }
 
+.organizers h2, .participants h2 {
+    font-size: 18px;
+    color: var(--pixel-yellow);
+    text-shadow: 
+        2px 2px 0px var(--pixel-black),
+        4px 4px 0px var(--pixel-orange);
+    margin-bottom: 1rem;
+}
+
 .organizers-container, .participants-container {
     margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+}
+
+/* Layout específico para organizadores */
+.organizers-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Layout específico para participantes */
+.participants-container {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .organizers-container, .participants-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .organizers-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .participants-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .organizers-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .participants-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .organizer, .participant {
-    border: 1px solid var(--blue);
-    border-radius: 15px;
+    border: 3px solid var(--pixel-cyan);
+    border-radius: 0;
     padding: 1.5rem;
     cursor: pointer;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(135deg, var(--pixel-white) 0%, var(--pixel-light-gray) 100%);
+    box-shadow: 
+        4px 4px 0px var(--pixel-black),
+        8px 8px 0px var(--pixel-purple);
+    transition: all 0.2s ease;
+    position: relative;
+    color: var(--pixel-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 280px;
+    justify-content: space-between;
+}
+
+.organizer:hover, .participant:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 
+        6px 6px 0px var(--pixel-black),
+        12px 12px 0px var(--pixel-purple);
+    border-color: var(--pixel-yellow);
+}
+
+.organizer::before, .participant::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(45deg, var(--pixel-cyan), var(--pixel-pink), var(--pixel-yellow), var(--pixel-green));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.organizer:hover::before, .participant:hover::before {
+    opacity: 0.3;
 }
 
 .organizer a, .participant a {
     text-decoration: none;
-    color: var(--dark-purple);
+    color: var(--pixel-black);
+    font-size: 16px;
+    margin: 0;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.organizer a:hover, .participant a:hover {
+    color: var(--pixel-cyan);
+    transform: scale(1.2);
+    text-shadow: 1px 1px 0px var(--pixel-black);
+}
+
+.organizer h4, .participant h4 {
+    font-size: 14px;
+    color: var(--pixel-black);
+    text-shadow: 1px 1px 0px var(--pixel-gray);
+    margin: 12px 0 8px 0;
+    flex-shrink: 0;
+}
+
+.organizer p, .participant p {
+    font-size: 10px;
+    color: var(--pixel-gray);
+    margin: 8px 0 16px 0;
+    line-height: 1.4;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 img {
-    width: 60px;
-    border-radius: 30px;
+    width: 80px;
+    height: 80px;
+    border-radius: 0;
+    border: 2px solid var(--pixel-black);
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    box-shadow: 2px 2px 0px var(--pixel-purple);
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    margin-bottom: 8px;
+}
+
+.organizer .social-links, .participant .social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 0px var(--pixel-purple), 6px 6px 0px var(--pixel-black);
+}
+
+/* Animações adicionais */
+@keyframes pixel-bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.organizer, .participant {
+    animation: pixel-bounce 3s ease-in-out infinite;
+}
+
+.organizer:nth-child(2), .participant:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.organizer:nth-child(3), .participant:nth-child(3) {
+    animation-delay: 1s;
+}
+
+/* ===== MONSTRINHOS PIXELADOS ===== */
+.pixel-monsters {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.monster {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+/* Monstrinho 1 - Fantasma azul */
+.monster-1 {
+    top: 20%;
+    left: 10%;
+    background: 
+        radial-gradient(circle at 8px 8px, var(--pixel-white) 2px, transparent 2px),
+        radial-gradient(circle at 24px 8px, var(--pixel-white) 2px, transparent 2px),
+        linear-gradient(45deg, 
+            var(--pixel-cyan) 0%, 
+            var(--pixel-cyan) 30%, 
+            var(--pixel-blue) 30%, 
+            var(--pixel-blue) 100%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: float-ghost 4s ease-in-out infinite;
+    box-shadow: 0 0 10px var(--pixel-cyan);
+}
+
+/* Monstrinho 2 - Slime verde */
+.monster-2 {
+    top: 60%;
+    right: 15%;
+    background: 
+        radial-gradient(circle at 8px 8px, var(--pixel-white) 1px, transparent 1px),
+        radial-gradient(circle at 24px 8px, var(--pixel-white) 1px, transparent 1px),
+        radial-gradient(circle at 16px 16px, rgba(255,255,255,0.3) 3px, transparent 3px),
+        linear-gradient(45deg, var(--pixel-green) 0%, #0d9488 100%);
+    border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+    animation: slime-bounce 3s ease-in-out infinite;
+    box-shadow: 0 0 8px var(--pixel-green);
+}
+
+/* Monstrinho 3 - Círculo roxo com dentes */
+.monster-3 {
+    top: 30%;
+    right: 25%;
+    background: 
+        radial-gradient(circle at 8px 8px, var(--pixel-white) 2px, transparent 2px),
+        radial-gradient(circle at 24px 8px, var(--pixel-white) 2px, transparent 2px),
+        linear-gradient(45deg, var(--pixel-purple) 0%, #7c3aed 100%);
+    border-radius: 50%;
+    animation: spin-monster 5s linear infinite;
+    box-shadow: 0 0 12px var(--pixel-purple);
+}
+
+/* Monstrinho 4 - Quadrado amarelo feliz */
+.monster-4 {
+    bottom: 25%;
+    left: 20%;
+    background: 
+        radial-gradient(circle at 8px 8px, var(--pixel-black) 2px, transparent 2px),
+        radial-gradient(circle at 24px 8px, var(--pixel-black) 2px, transparent 2px),
+        linear-gradient(45deg, var(--pixel-yellow) 0%, #f59e0b 100%);
+    border-radius: 20%;
+    animation: happy-bounce 2.5s ease-in-out infinite;
+    box-shadow: 0 0 10px var(--pixel-yellow);
+}
+
+/* Monstrinho 5 - Coração rosa */
+.monster-5 {
+    top: 15%;
+    right: 40%;
+    background: 
+        radial-gradient(circle at 8px 8px, var(--pixel-white) 2px, transparent 2px),
+        radial-gradient(circle at 24px 8px, var(--pixel-white) 2px, transparent 2px),
+        linear-gradient(45deg, var(--pixel-pink) 0%, #ec4899 100%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: heart-beat 3.5s ease-in-out infinite;
+    box-shadow: 0 0 15px var(--pixel-pink);
+}
+
+/* Monstrinho 6 - Diamante laranja */
+.monster-6 {
+    bottom: 40%;
+    right: 30%;
+    background: 
+        radial-gradient(circle at 8px 8px, var(--pixel-white) 2px, transparent 2px),
+        radial-gradient(circle at 24px 8px, var(--pixel-white) 2px, transparent 2px),
+        linear-gradient(45deg, var(--pixel-orange) 0%, #ea580c 100%);
+    border-radius: 20%;
+    transform: rotate(45deg);
+    animation: diamond-spin 4.5s ease-in-out infinite;
+    box-shadow: 0 0 12px var(--pixel-orange);
+}
+
+/* Animações dos monstrinhos */
+@keyframes float-ghost {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+@keyframes slime-bounce {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-10px) scale(1.1); }
+}
+
+@keyframes spin-monster {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes happy-bounce {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-8px) scale(1.05); }
+}
+
+@keyframes heart-beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes diamond-spin {
+    0%, 100% { transform: rotate(45deg) scale(1); }
+    50% { transform: rotate(225deg) scale(1.1); }
+}
+
+/* Hover effects para os monstrinhos */
+.monster:hover {
+    animation-play-state: paused;
+    transform: scale(1.2);
+    filter: brightness(1.3);
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Monstrinhos extras nas seções */
+.organizers::before, .participants::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: 
+        radial-gradient(circle at 6px 6px, var(--pixel-white) 1px, transparent 1px),
+        radial-gradient(circle at 18px 6px, var(--pixel-white) 1px, transparent 1px),
+        linear-gradient(45deg, var(--pixel-red) 0%, #dc2626 100%);
+    border-radius: 50%;
+    animation: mini-bounce 2s ease-in-out infinite;
+    box-shadow: 0 0 8px var(--pixel-red);
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.organizers::before {
+    background: 
+        radial-gradient(circle at 6px 6px, var(--pixel-white) 1px, transparent 1px),
+        radial-gradient(circle at 18px 6px, var(--pixel-white) 1px, transparent 1px),
+        linear-gradient(45deg, var(--pixel-green) 0%, #16a34a 100%);
+    box-shadow: 0 0 8px var(--pixel-green);
+}
+
+.participants::before {
+    background: 
+        radial-gradient(circle at 6px 6px, var(--pixel-white) 1px, transparent 1px),
+        radial-gradient(circle at 18px 6px, var(--pixel-white) 1px, transparent 1px),
+        linear-gradient(45deg, var(--pixel-blue) 0%, #2563eb 100%);
+    box-shadow: 0 0 8px var(--pixel-blue);
+}
+
+@keyframes mini-bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0px); }
+    50% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* Monstrinhos flutuantes aleatórios */
+.organizers, .participants {
+    position: relative;
+}
+
+.organizers::after, .participants::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: var(--pixel-yellow);
+    border-radius: 50%;
+    animation: random-float 6s ease-in-out infinite;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.organizers::after {
+    top: 30%;
+    right: 10%;
+    background: var(--pixel-purple);
+    animation-delay: 1s;
+}
+
+.participants::after {
+    top: 20%;
+    left: 15%;
+    background: var(--pixel-pink);
+    animation-delay: 2s;
+}
+
+@keyframes random-float {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.7;
+    }
+    25% { 
+        transform: translateY(-10px) rotate(90deg);
+        opacity: 1;
+    }
+    50% { 
+        transform: translateY(5px) rotate(180deg);
+        opacity: 0.5;
+    }
+    75% { 
+        transform: translateY(-5px) rotate(270deg);
+        opacity: 0.8;
+    }
 }
 
 
