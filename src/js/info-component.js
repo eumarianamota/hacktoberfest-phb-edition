@@ -163,22 +163,50 @@ class InfoComponent extends HTMLElement {
                     width: 80px;
                     height: 80px;
                     border: 2px solid var(--pixel-black, #0d1117);
-                    background: linear-gradient(45deg, var(--pixel-gray, #6b7280), var(--pixel-light-gray, #e5e7eb));
+                    background: linear-gradient(135deg, var(--pixel-purple, #8b5cf6), var(--pixel-blue, #3b82f6));
                     display: flex;
+                    flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    font-size: 12px;
-                    color: var(--pixel-white, #f8fafc);
-                    text-shadow: 1px 1px 0px var(--pixel-black, #0d1117);
                     margin-bottom: 8px;
                     flex-shrink: 0;
+                    border-radius: 0;
+                    box-shadow: 2px 2px 0px var(--pixel-black, #0d1117);
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .placeholder-icon {
+                    font-size: 24px;
+                    color: var(--pixel-white, #f8fafc);
+                    margin-bottom: 2px;
+                }
+
+                .placeholder-img::before {
+                    content: '';
+                    position: absolute;
+                    top: -50%;
+                    left: -50%;
+                    width: 200%;
+                    height: 200%;
+                    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+                    animation: shimmer 2s infinite;
+                }
+
+                @keyframes shimmer {
+                    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+                    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
                 }
             </style>
             
             <div class="info-card">
-                ${img ? 
+                ${img && img !== '' ? 
                     `<img src="${img}" alt="Foto de perfil - ${name}" class="profile-img">` : 
-                    `<div class="placeholder-img">${name.charAt(0).toUpperCase()}</div>`
+                    `<div class="placeholder-img">
+                        <div class="placeholder-icon">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+                    </div>`
                 }
                 <h4 class="name">${name}</h4>
                 <p class="description">${description}</p>

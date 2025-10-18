@@ -1,139 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <title>Hacktoberfest 2025</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/styles/style.css">
-    <title>Hacktoberfest 2025</title> 
-</head>
-
-<body>
+  <body>
     <main>
-        <section class="main">
-            <h1>HacktoberFest PHB Edition 2025</h1>
-            
-            <!-- Monstrinhos pixelados -->
-            <div class="pixel-monsters">
-                <div class="monster monster-1"></div>
-                <div class="monster monster-2"></div>
-                <div class="monster monster-3"></div>
-                <div class="monster monster-4"></div>
-                <div class="monster monster-5"></div>
-                <div class="monster monster-6"></div>
-            </div>
-        </section>
+      <section class="main">
+        <h1 class="title">HacktoberFest PHB Edition 2025</h1>
 
-        <section class="organizers">
-            <h2>Organizadores</h2>
+        <!-- Monstrinhos pixelados -->
+        <div class="pixel-monsters">
+          <div class="monster monster-1"></div>
+          <div class="monster monster-2"></div>
+          <div class="monster monster-3"></div>
+          <div class="monster monster-4"></div>
+          <div class="monster monster-5"></div>
+          <div class="monster monster-6"></div>
+        </div>
+      </section>
 
-            <div class="organizers-container">
-                <info-card 
-                    name="Mariana da Mota Pinho"
-                    insta="https://www.instagram.com/eumariana.dev/"
-                    github="https://github.com/eumarianamota"
-                    linkedin=""
-                    img="documents/mariana-mota-perfil.jpg">
-                </info-card>
-            </div>
-        </section>
+      <section class="organizers">
+        <h2>Organizadores</h2>
+        <div class="organizers-container">
+          <info-card
+            name="Mariana da Mota Pinho"
+            insta="https://www.instagram.com/eumariana.dev/"
+            github="https://github.com/eumarianamota"
+            linkedin=""
+            img="documents/mariana-mota-perfil.jpg"
+          >
+          </info-card>
 
-        <section class="participants">
-            <h2>Participantes</h2>
-            <div class="participants-container">
-                <info-card 
-                    name="Dione Bastos Sousa"
-                    insta="https://www.instagram.com/dibastos.dev"
-                    github="https://github.com/Dione-b"
-                    linkedin="https://www.linkedin.com/in/dione-bastos"
-                    img="documents/dione_profile.png"
-                    description="Desenvolvedor Full Stack | Blockchain Developer">
-                </info-card>
+          <info-card
+            name="Vitor dos Santos Correia"
+            insta=""
+            github=""
+            linkedin=""
+          >
+          </info-card>
+        </div>
+      </section>
 
-                <info-card 
-                    name="Jonatha Sousa Carvalho"
-                    insta="https://www.instagram.com/eujonathamermo/"
-                    github="https://github.com/jowgaze"
-                    linkedin=""
-                    img="documents/jowgaze-perfil.png"
-                    description="Estudante de ciência de computação na UESPI de parnaíba.">
-                </info-card>
+      <section class="participants">
+        <h2>Participantes</h2>
+        <div class="participants-container">
+          <info-card
+            name="Dione Bastos Sousa"
+            insta="https://www.instagram.com/dibastos.dev"
+            github="https://github.com/Dione-b"
+            linkedin="https://www.linkedin.com/in/dione-bastos"
+            img="documents/dione_profile.png"
+            description="Desenvolvedor Full Stack | Blockchain Developer"
+          >
+          </info-card>
 
-                <info-card 
-                    name="Ruan Anjos"
-                    insta=""
-                    github="https://github.com/oAnjophb"
-                    linkedin=""
-                    img="./documents/ruan-anjos.jpeg"
-                    description="Estudante de sistemas de computação na UESPI de parnaíba.">
-                </info-card>
+          <info-card
+            name="Jonatha Sousa Carvalho"
+            insta="https://www.instagram.com/eujonathamermo/"
+            github="https://github.com/jowgaze"
+            linkedin=""
+            img="documents/jowgaze-perfil.png"
+            description="Estudante de ciência de computação na UESPI de parnaíba."
+          >
+          </info-card>
 
-                <info-card 
-                    name="João Pedro Ribeiro"
-                    insta=""
-                    github=""
-                    linkedin=""
-                    description="Estudante de Ciência de Computação na UESPI de parnaíba.">
-                </info-card>
+          <info-card
+            name="Ruan Anjos"
+            insta=""
+            github="https://github.com/oAnjophb"
+            linkedin=""
+            img="./documents/ruan-anjos.jpeg"
+            description="Estudante de sistemas de computação na UESPI de parnaíba."
+          >
+          </info-card>
 
-                <info-card 
-                    name="Angelina Machado de Siqueira"
-                    insta="https://www.instagram.com/angelina_kaay/"
-                    github="https://github.com/ASangelina"
-                    linkedin=""
-                    img="documents/angelina-siqueira-perfil.jpeg"
-                    description="Engenheira de Software pela UDESC">
-                </info-card>
-              
-                <div class="participant">
-                    <img src="documents/jowgaze-perfil.png" alt="Foto-de-perfil-Jonatha">
-                    <h4>Jonatha Sousa Carvalho</h4>
-                    <p>Estudante de ciência de computação na UESPI de parnaíba.</p>
-                    <a href="https://www.instagram.com/eujonathamermo/"> <i class="bi bi-instagram"></i> </a>
-                    <a href="https://github.com/jowgaze"> <i class="bi bi-github"></i> </a>
-                </div>
-              
-               <div class="participant">
-                    <img src="./documents/ruan-anjos.jpeg" alt="Foto-de-perfil-RuanAnjos">
-                    <h4>Ruan Anjos</h4>
-                    <p>Estudante de sistemas de computação na UESPI de parnaíba.</p>
-                    <a href="#"> <i class="bi bi-instagram"></i> </a>
-                    <a href="https://github.com/oAnjophb"> <i class="bi bi-github"></i> </a>
-              </div>
-              
-                <div class="participant">
-                    <h4>João Pedro Ribeiro</h4>
-                    <p>Estudante de Ciência de Computação na UESPI de parnaíba.</p>
-                    <a href="https://www.instagram.com/jpedro_ribeiroc3po"> <i class="bi bi-instagram"></i> </a>
-                    <a href="https://github.com/jp3droribeiro"> <i class="bi bi-github"></i> </a>
-                </div>
-          
-                <div class="participant">
-                    <img src="documents/angelina-siqueira-perfil.jpeg" alt="Foto-de-perfil-angelina">
-                    <h4>Angelina Machado de Siqueira</h4>
-                    <p>Engenheira de Software pela UDESC</p>
-                     <a href="https://www.instagram.com/angelina_kaay/"> <i class="bi bi-instagram"></i></a>
-                    <a href="https://github.com/ASangelina"> <i class="bi bi-github"></i> </a>
-                </div>
-              
-                <div class="participant">
-                    <h4>Particpante de exemplo</h4>
-                    <p>Estudante de sistemas de computação na UESPI de parnaíba.</p>
-                    <a href="#"> <i class="bi bi-instagram"></i> </a>
-                    <a href="#"> <i class="bi bi-github"></i> </a>
-                </div>
-                  
-            </div>
-        </section>
-        <footer>
-            <p>HacktoberFest 2025</p>
-        </footer>
+          <info-card
+            name="João Pedro Ribeiro"
+            insta="https://www.instagram.com/jpedro_ribeiroc3po"
+            github="https://github.com/jp3droribeiro"
+            linkedin=""
+            img=""
+            description="Estudante de Ciência de Computação na UESPI de parnaíba."
+          >
+          </info-card>
+
+          <info-card
+            name="Angelina Machado de Siqueira"
+            insta="https://www.instagram.com/angelina_kaay/"
+            github="https://github.com/ASangelina"
+            linkedin=""
+            img="documents/angelina-siqueira-perfil.jpeg"
+            description="Engenheira de Software pela UDESC"
+          >
+          </info-card>
+
+          <info-card
+            name="Fabricio Fontenele"
+            insta="https://www.instagram.com/_fabriciovieira_a/"
+            github="https://github.com/Fabricio-Fontenele"
+            linkedin=""
+            img="documents/Fabricio-perfil.jpeg"
+            description="Estudante de sistemas de computação na UESPI de parnaíba."
+          >
+          </info-card>
+
+          <info-card
+            name="Luana Costa Vasconcelos"
+            insta=""
+            github="https://github.com/luanacostav"
+            linkedin=""
+            img="documents/luana-vasconcelos-perfil.png"
+            description="Estudante de Análise e Desenvolvimento de Sistemas no IFPI de Parnaíba."
+          >
+          </info-card>
+
+          <info-card
+            name="João Pedro Barbosa"
+            insta="https://www.instagram.com/dev_joaopedro/"
+            github="https://github.com/barbosa-jp"
+            linkedin=""
+            img="documents/joao-pedro-barbosa-perfil.jpeg"
+            description="Estudante de Análise e Desenvolvimento de Sistemas no IFPI de Parnaíba."
+          >
+          </info-card>
+
+          <info-card
+            name="Richard Costa de Brito"
+            insta="https://www.instagram.com/britoricharddd?igsh=aWNycnRsbmRxenM1"
+            github="https://github.com/RichardDeBrito"
+            linkedin=""
+            img="documents/26 (1).png"
+            description="Estudante de sistemas de computação na UESPI de parnaíba."
+          >
+          </info-card>
+
+          <info-card
+            name="Isabela Dutra"
+            insta="https://www.instagram.com/_isadutrar"
+            github="https://github.com/isadtr"
+            linkedin=""
+            img="documents/isabela-dutra-perfil.png"
+            description="Estudante de Análise e Desenvolvimento de Sistemas na UNINTER."
+          >
+          </info-card>
+
+          <info-card
+            name="Kauã Neres Moura"
+            insta="https://www.instagram.com/neres.dev?igsh=MTN2d2Rxc3J6emhjbQ=="
+            github="https://github.com/Kaua-cel"
+            linkedin=""
+            img="documents/kaua-neres-perfil.jpeg"
+            description="Estudante de sistemas de computação na UESPI de parnaíba."
+          >
+          </info-card>
+
+          <info-card
+            name="João Pedro Aguiar Teixeira"
+            insta="https://www.instagram.com/pdro025/"
+            github="https://github.com/pedroaguiarcd"
+            linkedin=""
+            img="documents/pedroaguiarhacktoberfestimage.jpg"
+            description="Estudante de sistemas de computação na UESPI de parnaíba."
+          >
+          </info-card>
+
+          <info-card
+            name="Edson Rocha da Silva"
+            insta="https://www.instagram.com/edsonrochada39/"
+            github="https://github.com/eddieJPN"
+            linkedin=""
+            img="documents/edson-rocha-perfil.jpg"
+            description="Estudante de sistemas de computação na UESPI de parnaíba."
+          >
+          </info-card>
+        </div>
+      </section>
     </main>
-    
+
+    <footer>
+      <p>HacktoberFest 2025</p>
+    </footer>
+
     <script src="./src/js/info-component.js"></script>
-</body>
+  </body>
 </html>
