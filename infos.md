@@ -1,6 +1,7 @@
 # Organizadores HacktoberFest PHB Edition 2025
 - Mariana da Mota Pinho - [Insta](https://www.instagram.com/eumariana.dev/) & [Github](https://github.com/eumarianamota)
 - Vitor dos Santos Correia - [Insta]() & [Github]()
+- Francisco Alves Ribeiro Neto - [Insta](https://www.instagram.com/fneto.eu) & [Github](https://github.com/fnetgit) & [LinkedIn](https://www.linkedin.com/in/francisco-alves-ribeiro-neto)
 
 # Participantes HacktoberFest PHB Edition 2025
 - Dione Bastos Sousa - [Insta](https://www.instagram.com/dibastos.dev) & [Github](https://github.com/Dione-b) & [LinkedIn](https://www.linkedin.com/in/dione-bastos)
